@@ -28,28 +28,29 @@
         el.addEventListener(event, callback);
       }
     }
-
-    function ajax(url, method, data) {
-      return new Promise(function(resolve, reject) {
-        var request = new XMLHttpRequest();
-        request.open(method, url, true);
-        request.responseType = 'text';
-        request.setRequestHeader("Content-Type", "application/json");
-        request.onreadystatechange = function() {
-          if (request.readyState === XMLHttpRequest.DONE) {
-            if (request.status === 200) {
-              resolve(request.responseText);
-            } else {
-              reject(Error(request.statusText));
-            }
-          }
-        };
-        request.onerror = function() {
-          reject(Error("Network Error"));
-        };
-        request.send(data);
-      });
-    }
+    // FOR THE JSON DATABSE
+    
+    // function ajax(url, method, data) {
+    //   return new Promise(function(resolve, reject) {
+    //     var request = new XMLHttpRequest();
+    //     request.open(method, url, true);
+    //     request.responseType = 'text';
+    //     request.setRequestHeader("Content-Type", "application/json");
+    //     request.onreadystatechange = function() {
+    //       if (request.readyState === XMLHttpRequest.DONE) {
+    //         if (request.status === 200) {
+    //           resolve(request.responseText);
+    //         } else {
+    //           reject(Error(request.statusText));
+    //         }
+    //       }
+    // };
+    //     request.onerror = function() {
+    //       reject(Error("Network Error"));
+    //     };
+    //     request.send(data);
+    //   });
+    // }
     var submitC = function(e) {
       e.preventDefault();
       var data = {
