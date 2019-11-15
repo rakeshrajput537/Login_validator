@@ -29,7 +29,7 @@
       }
     }
     // FOR THE JSON DATABSE
-    
+
     // function ajax(url, method, data) {
     //   return new Promise(function(resolve, reject) {
     //     var request = new XMLHttpRequest();
@@ -58,16 +58,16 @@
         'password': myInput.value
       };
 			var validate = new Validate();
-
-			if (validate.check()) {
-				ajax('http://localhost:5000/update', 'POST', JSON.stringify(data)).then(function(result) {
-					console.log(result);
-				}).catch(function() {
-					console.log('failed');
-				});
-			} else {
-				console.log('enter valid password');
-			}
+      // For the Json
+			// if (validate.check()) {
+			// 	ajax('http://localhost:5000/update', 'POST', JSON.stringify(data)).then(function(result) {
+			// 		console.log(result);
+			// 	}).catch(function() {
+			// 		console.log('failed');
+			// 	});
+			// } else {
+			// 	console.log('enter valid password');
+			// }
     }
     function eventListeners () {
       generic.addEvent(myInput, 'keyup', keyupC);
